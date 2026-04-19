@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Logic Infra | International Flight Claims</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0D0D0D;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #C6A667;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            color: #C6A667;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .lang-selector button {
+            background: transparent;
+            border: 1px solid #C6A667;
+            color: #C6A667;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-left: 10px;
+            border-radius: 4px;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            background-color: #C6A667;
+            color: #0D0D0D;
+            padding: 15px 40px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #dfc185;
+        }
+        .legal-section {
+            padding: 50px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .legal-box {
+            border-left: 4px solid #C6A667;
+            padding: 20px;
+            background: #1a1a1a;
+            margin-bottom: 30px;
+        }
+        .source-tag {
+            font-size: 12px;
+            color: #C6A667;
+            display: block;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 14px;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Alpha Logic Infra</div>
+    <div class="lang-selector">
+        <button onclick="changeLang('en')">🇺🇸 EN</button>
+        <button onclick="changeLang('pt')">🇧🇷 PT</button>
+        <button onclick="changeLang('de')">🇩🇪 DE</button>
+    </div>
+</header>
+
+<section class="hero">
+    <h1 id="hero-title">Delayed Flight? Get Your €600 Compensation.</h1>
+    <p id="hero-sub">Professional Legal-Ready Kits based on 2026 Aviation Laws.</p>
+    <br><br>
+    <a href="#" class="cta-button" id="cta-text">CLAIM YOUR RIGHTS NOW</a>
+</section>
+
+<section class="legal-section">
+    <h2 id="info-title">Legal Authority & 2026 Regulations</h2>
+    
+    <div class="legal-box">
+        <h3 id="law1-title">The "Air Chaos" Update (Jan 2026)</h3>
+        <p id="law1-text">As of January 21, 2026, the General Court's ruling strictly limits airlines from using "traffic management" as a generic excuse. Operational failures are no longer considered extraordinary circumstances.</p>
+        <span class="source-tag">Source: Regulation (EC) No 261/2004 / EU Case Law 2026</span>
+    </div>
+
+    <div class="legal-box">
+        <h3 id="law2-title">US DOT Cash Refund Mandate</h3>
+        <p id="law2-text">Under 14 CFR Part 260, airlines are now legally required to provide automatic cash refunds for significant delays (3h+ domestic / 6h+ international) if re-accommodation is declined.</p>
+        <span class="source-tag">Source: US Department of Transportation (2024/25 Rulemaking)</span>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 Alpha Logic Infra. Professional Support for Global Passengers.
+</footer>
+
+<script>
+    const translations = {
+        en: {
+            heroTitle: "Delayed Flight? Get Your €600 Compensation.",
+            heroSub: "Professional Legal-Ready Kits based on 2026 Aviation Laws.",
+            cta: "CLAIM YOUR RIGHTS NOW",
+            info: "Legal Authority & 2026 Regulations",
+            law1T: "The 'Air Chaos' Update (Jan 2026)",
+            law1P: "As of January 21, 2026, the General Court's ruling strictly limits airlines from using 'traffic management' as a generic excuse.",
+            law2T: "US DOT Cash Refund Mandate",
+            law2P: "Under 14 CFR Part 260, airlines are now legally required to provide automatic cash refunds for significant delays."
+        },
+        pt: {
+            heroTitle: "Voo Atrasado? Receba sua Indenização de €600.",
+            heroSub: "Kits Jurídicos Profissionais baseados nas Leis Aéreas de 2026.",
+            cta: "REIVINDIQUE SEUS DIREITOS AGORA",
+            info: "Autoridade Jurídica e Normas de 2026",
+            law1T: "Atualização 'Caos Aéreo' (Jan 2026)",
+            law1P: "Desde 21 de janeiro de 2026, a decisão do Tribunal Geral limita rigorosamente as companhias de usar 'gestão de tráfego' como desculpa genérica.",
+            law2T: "Mandato de Reembolso em Dinheiro (EUA)",
+            law2P: "Sob a norma 14 CFR Part 260, as aéreas são obrigadas a fornecer reembolsos automáticos em dinheiro para atrasos significativos."
+        },
+        de: {
+            heroTitle: "Flugverspätung? Erhalten Sie 600 € Entschädigung.",
+            heroSub: "Professionelle Kits basierend auf den Luftfahrtgesetzen von 2026.",
+            cta: "JETZT RECHTE EINFORDERN",
+            info: "Rechtliche Autorität & Vorschriften 2026",
+            law1T: "Update 'Luftchaos' (Jan 2026)",
+            law1P: "Seit dem 21. Januar 2026 schränkt das Urteil des Gerichts die Fluggesellschaften strikt ein, 'Verkehrsmanagement' als allgemeine Ausrede zu nutzen.",
+            law2T: "US DOT Bargeld-Rückerstattung",
+            law2P: "Nach 14 CFR Part 260 sind Fluggesellschaften nun gesetzlich verpflichtet, bei erheblichen Verspätungen automatische Rückerstattungen zu leisten."
+        }
+    };
+
+    function changeLang(lang) {
+        document.getElementById('hero-title').innerText = translations[lang].heroTitle;
+        document.getElementById('hero-sub').innerText = translations[lang].heroSub;
+        document.getElementById('cta-text').innerText = translations[lang].cta;
+        document.getElementById('info-title').innerText = translations[lang].info;
+        document.getElementById('law1-title').innerText = translations[lang].law1T;
+        document.getElementById('law1-text').innerText = translations[lang].law1P;
+        document.getElementById('law2-title').innerText = translations[lang].law2T;
+        document.getElementById('law2-text').innerText = translations[lang].law2P;
+    }
+</script>
+
+</body>
+</html>
