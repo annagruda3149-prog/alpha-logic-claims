@@ -1,36 +1,97 @@
-<style>
-    .logo-container {
-        display: flex;
-        align-items: center;
-        border: 2px solid var(--gold);
-        padding: 5px 15px;
-    }
-    .logo-text {
-        font-family: 'Playfair Display', serif;
-        color: var(--gold);
-        font-size: 20px;
-        font-weight: 700;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-    }
-    .brand-sub {
-        font-size: 10px;
-        color: var(--light);
-        display: block;
-        letter-spacing: 1px;
-        text-align: center;
-    }
-</style>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Logic Infrastructure Group | Statutory Global Recovery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #C6A667; --dark: #0D0D0D; --light: #FFFFFF; --gray: #141414; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--dark); color: var(--light); font-family: 'Montserrat', sans-serif; margin: 0; line-height: 1.6; overflow-x: hidden; }
+        header { padding: 25px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--gold); position: sticky; top: 0; background: rgba(13,13,13,0.95); z-index: 1000; backdrop-filter: blur(10px); }
+        .logo-group { display: flex; flex-direction: column; border-left: 3px solid var(--gold); padding-left: 15px; }
+        .logo-main { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 22px; text-transform: uppercase; letter-spacing: 4px; }
+        .logo-sub { font-size: 10px; color: var(--light); letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; }
+        .nav-tools { display: flex; align-items: center; gap: 15px; }
+        .lang-btn { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 6px 15px; cursor: pointer; font-size: 11px; transition: 0.3s; font-weight: 700; }
+        .lang-btn:hover { background: var(--gold); color: var(--dark); }
+        .hero { text-align: center; padding: 160px 20px; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-attachment: fixed; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 54px; margin-bottom: 20px; color: var(--gold); letter-spacing: -1px; }
+        .hero p { font-size: 20px; font-weight: 300; max-width: 900px; margin: 0 auto 40px; color: #d1d1d1; }
+        .cta-gold { background: var(--gold); color: var(--dark); padding: 20px 50px; font-weight: 700; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: 0.4s; border: none; cursor: pointer; }
+        .cta-gold:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(198,166,103,0.3); }
+        .section { padding: 100px 50px; max-width: 1200px; margin: auto; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 50px; }
+        .stat-card { background: var(--gray); padding: 45px; border: 1px solid #222; position: relative; transition: 0.3s; }
+        .stat-card:hover { border-color: var(--gold); }
+        .stat-card h3 { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 20px; text-transform: uppercase; }
+        .stat-card p { font-size: 15px; color: #aaa; }
+        .division-tag { color: var(--gold); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; display: block; }
+        .audit-box { background: #111; padding: 60px; border-top: 4px solid var(--gold); text-align: center; }
+        .footer { padding: 80px 50px; background: #050505; border-top: 1px solid #1a1a1a; text-align: center; }
+        .legal-footer { font-size: 10px; color: #444; margin-top: 30px; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
 <header>
-    <div class="logo-container">
-        <div>
-            <span class="logo-text">Alpha Logic</span>
-            <span class="brand-sub">INFRASTRUCTURE GROUP</span>
-        </div>
+    <div class="logo-group">
+        <span class="logo-main">Alpha Logic</span>
+        <span class="logo-sub">Infrastructure Group</span>
     </div>
-    <div>
-        <button class="lang-btn" onclick="changeLang('en')">EN</button>
-        <button class="lang-btn" onclick="changeLang('pt')">PT</button>
+    <div class="nav-tools">
+        <button class="lang-btn" onclick="changeLang('en')">ENGLISH</button>
+        <button class="lang-btn" onclick="changeLang('pt')">PORTUGUÊS</button>
     </div>
 </header>
+<section class="hero">
+    <span class="division-tag">Air Transport Division</span>
+    <h1 id="t-h1">Statutory Global Recovery</h1>
+    <p id="t-p1">Elite institutional framework for cross-border aviation claims. Technical auditing, legal-ready documentation, and 2026 regulatory compliance.</p>
+    <a href="mailto:audit@alphalogicinfra.com" class="cta-gold" id="t-cta">Contact Audit Department</a>
+</section>
+<section class="section" id="intel">
+    <div class="grid-3">
+        <div class="stat-card">
+            <span class="division-tag">Intelligence Unit</span>
+            <h3 id="t-c1h">Data Telemetry Audit</h3>
+            <p id="t-c1p">We isolate operational failures from systemic disruptions using high-fidelity flight telemetry cross-referenced with the 2026 Statutory Standard.</p>
+        </div>
+        <div class="stat-card">
+            <span class="division-tag">Legal Infrastructure</span>
+            <h3 id="t-c2h">Regulatory Compliance</h3>
+            <p id="t-c2p">All recovery processes strictly adhere to EC 261/2004, US DOT 14 CFR 260, and UK261 requirements, ensuring unassailable demand letters.</p>
+        </div>
+    </div>
+</section>
+<section class="audit-box">
+    <h2 id="t-ph">Institutional Expansion</h2>
+    <p id="t-pp">Our network is formalizing partnerships with sworn translators and relocation specialists in Berlin, London, and Frankfurt.</p>
+    <br>
+    <a href="mailto:audit@alphalogicinfra.com" class="cta-gold" id="t-pcta">Partner with the Group</a>
+</section>
+<footer class="footer">
+    <p id="t-f">&copy; 2026 Alpha Logic Infrastructure Group. All Rights Reserved. Private & Confidential.</p>
+    <div class="legal-footer">COMPLIANCE: ICAO | EASA | FAA | UK CAA STATUTORY STANDARDS</div>
+</footer>
+<script>
+    const tr = {
+        en: { h1: "Statutory Global Recovery", p1: "Elite institutional framework for cross-border aviation claims. Technical auditing and 2026 regulatory compliance.", cta: "Contact Audit Department", c1h: "Data Telemetry Audit", c1p: "We isolate operational failures using high-fidelity telemetry cross-referenced with 2026 standards.", c2h: "Regulatory Compliance", c2p: "Processes strictly adhere to EC 261, US DOT 14 CFR 260, and UK261 requirements.", ph: "Institutional Expansion", pp: "Our network is formalizing partnerships with specialists in Berlin, London, and Frankfurt.", pcta: "Partner with the Group", f: "© 2026 Alpha Logic Infrastructure Group. Private & Confidential." },
+        pt: { h1: "Recuperação Estatutária Global", p1: "Estrutura institucional de elite para reivindicações de aviação. Auditoria técnica e conformidade regulatória 2026.", cta: "Contatar Departamento de Auditoria", c1h: "Auditoria de Telemetria", c1p: "Isolamos falhas operacionais usando telemetria de alta fidelidade cruzada com padrões de 2026.", c2h: "Conformidade Regulatória", c2p: "Processos seguem rigorosamente EC 261, US DOT 14 CFR 260 e requisitos UK261.", ph: "Expansão Institucional", pp: "Nossa rede está formalizando parcerias com especialistas em Berlim, Londres e Frankfurt.", pcta: "Seja um Parceiro do Grupo", f: "© 2026 Grupo Alpha Logic Infra. Privado & Confidencial." }
+    };
+    function changeLang(l){
+        document.getElementById('t-h1').innerText = tr[l].h1;
+        document.getElementById('t-p1').innerText = tr[l].p1;
+        document.getElementById('t-cta').innerText = tr[l].cta;
+        document.getElementById('t-c1h').innerText = tr[l].c1h;
+        document.getElementById('t-c1p').innerText = tr[l].c1p;
+        document.getElementById('t-c2h').innerText = tr[l].c2h;
+        document.getElementById('t-c2p').innerText = tr[l].c2p;
+        document.getElementById('t-ph').innerText = tr[l].ph;
+        document.getElementById('t-pp').innerText = tr[l].pp;
+        document.getElementById('t-pcta').innerText = tr[l].pcta;
+        document.getElementById('t-f').innerText = tr[l].f;
+    }
+</script>
+</body>
+</html>
