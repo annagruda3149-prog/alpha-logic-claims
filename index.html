@@ -3,170 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Logic Infra | International Flight Claims</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Alpha Logic Infra | Global Passenger Rights & Legal-Ready Infrastructure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #0D0D0D;
-            color: #FFFFFF;
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #C6A667;
-        }
-        .logo {
-            font-family: 'Playfair Display', serif;
-            color: #C6A667;
-            font-size: 24px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .lang-selector button {
-            background: transparent;
-            border: 1px solid #C6A667;
-            color: #C6A667;
-            padding: 5px 10px;
-            cursor: pointer;
-            margin-left: 10px;
-            border-radius: 4px;
-        }
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-        }
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        .cta-button {
-            background-color: #C6A667;
-            color: #0D0D0D;
-            padding: 15px 40px;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 2px;
-            transition: 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #dfc185;
-        }
-        .legal-section {
-            padding: 50px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        .legal-box {
-            border-left: 4px solid #C6A667;
-            padding: 20px;
-            background: #1a1a1a;
-            margin-bottom: 30px;
-        }
-        .source-tag {
-            font-size: 12px;
-            color: #C6A667;
-            display: block;
-            margin-top: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 14px;
-            border-top: 1px solid #333;
-        }
+        :root { --gold: #C6A667; --dark: #0D0D0D; --light: #FFFFFF; --gray: #1a1a1a; }
+        body { background-color: var(--dark); color: var(--light); font-family: 'Montserrat', sans-serif; margin: 0; line-height: 1.6; }
+        header { padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--gold); position: sticky; top: 0; background: var(--dark); z-index: 1000; }
+        .logo { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 22px; text-transform: uppercase; letter-spacing: 2px; }
+        nav a { color: var(--light); text-decoration: none; margin-left: 20px; font-size: 14px; text-transform: uppercase; }
+        .lang-btn { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 5px 12px; cursor: pointer; border-radius: 2px; font-size: 12px; }
+        
+        .hero { text-align: center; padding: 120px 20px; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?auto=format&fit=crop&w=1350&q=80'); background-size: cover; border-bottom: 1px solid var(--gold); }
+        h1 { font-family: 'Playfair Display', serif; font-size: 52px; margin-bottom: 10px; color: var(--gold); }
+        .hero p { font-size: 20px; font-weight: 300; max-width: 800px; margin: 0 auto 30px; }
+        .cta-main { background: var(--gold); color: var(--dark); padding: 18px 45px; font-weight: 700; text-decoration: none; border-radius: 2px; transition: 0.4s; display: inline-block; }
+        .cta-main:hover { background: #dfc185; transform: translateY(-3px); }
+
+        .section { padding: 80px 50px; max-width: 1100px; margin: auto; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 36px; border-bottom: 2px solid var(--gold); display: inline-block; margin-bottom: 40px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: var(--gray); padding: 30px; border: 1px solid #333; border-radius: 4px; transition: 0.3s; }
+        .card:hover { border-color: var(--gold); }
+        .card h3 { color: var(--gold); margin-top: 0; }
+
+        .partner-box { background: var(--gold); color: var(--dark); padding: 40px; text-align: center; margin-top: 40px; }
+        .partner-box h2 { border-color: var(--dark); }
+        .cta-alt { border: 2px solid var(--dark); color: var(--dark); padding: 12px 30px; text-decoration: none; font-weight: 700; margin-top: 20px; display: inline-block; }
+
+        footer { text-align: center; padding: 60px; background: #050505; border-top: 1px solid #222; }
+        .trust-badges { margin-bottom: 30px; opacity: 0.7; }
+        .trust-badges img { height: 40px; margin: 0 15px; filter: grayscale(100%) invert(100%); }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo">Alpha Logic Infra</div>
-    <div class="lang-selector">
-        <button onclick="changeLang('en')">🇺🇸 EN</button>
-        <button onclick="changeLang('pt')">🇧🇷 PT</button>
-        <button onclick="changeLang('de')">🇩🇪 DE</button>
-    </div>
+    <nav>
+        <button class="lang-btn" onclick="changeLang('en')">EN</button>
+        <button class="lang-btn" onclick="changeLang('pt')">PT</button>
+        <button class="lang-btn" onclick="changeLang('de')">DE</button>
+    </nav>
 </header>
 
 <section class="hero">
-    <h1 id="hero-title">Delayed Flight? Get Your €600 Compensation.</h1>
-    <p id="hero-sub">Professional Legal-Ready Kits based on 2026 Aviation Laws.</p>
-    <br><br>
-    <a href="#" class="cta-button" id="cta-text">CLAIM YOUR RIGHTS NOW</a>
+    <h1 id="h-title">Statutory Aviation Claims — 2026 Legal Standard</h1>
+    <p id="h-sub">Global infrastructure for flight disruption recovery. Backed by proprietary data auditing and international aviation experts.</p>
+    <a href="#" class="cta-main" id="h-cta">ACCESS TRANSPARENCY GUIDE 2026</a>
 </section>
 
-<section class="legal-section">
-    <h2 id="info-title">Legal Authority & 2026 Regulations</h2>
-    
-    <div class="legal-box">
-        <h3 id="law1-title">The "Air Chaos" Update (Jan 2026)</h3>
-        <p id="law1-text">As of January 21, 2026, the General Court's ruling strictly limits airlines from using "traffic management" as a generic excuse. Operational failures are no longer considered extraordinary circumstances.</p>
-        <span class="source-tag">Source: Regulation (EC) No 261/2004 / EU Case Law 2026</span>
+<section class="section">
+    <h2 id="s1-title">Our Technology & Methodology</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 id="m1-title">Advanced Data Auditing</h3>
+            <p id="m1-text">Our proprietary engine cross-references real-time flight data with current EU261 and UK261 jurisprudence to isolate operational failures from "extraordinary circumstances".</p>
+        </div>
+        <div class="card">
+            <h3 id="m2-title">Specialized Technical Team</h3>
+            <p id="m2-text">Every claim is validated by experts in international aviation law, ensuring that your formal demand is legally unassailable and ready for enforcement.</p>
+        </div>
+        <div class="card">
+            <h3 id="m3-title">Legal-Ready Infrastructure</h3>
+            <p id="m3-text">We don't just provide letters. We build the entire evidentiary chain required to force immediate settlements from major airlines.</p>
+        </div>
     </div>
+</section>
 
-    <div class="legal-box">
-        <h3 id="law2-title">US DOT Cash Refund Mandate</h3>
-        <p id="law2-text">Under 14 CFR Part 260, airlines are now legally required to provide automatic cash refunds for significant delays (3h+ domestic / 6h+ international) if re-accommodation is declined.</p>
-        <span class="source-tag">Source: US Department of Transportation (2024/25 Rulemaking)</span>
+<section class="section" style="background: #111;">
+    <h2 id="s2-title">Strategic Partnerships & Relocation</h2>
+    <p id="p-text">The Alpha Logic network extends beyond claims. We provide a full ecosystem for international travelers and expats in Europe.</p>
+    <div class="grid">
+        <div class="card">
+            <h3 id="p1-title">Certified Translations</h3>
+            <p id="p1-text">Access our partner network of sworn translators in Berlin and London for official documentation and legal proceedings.</p>
+        </div>
+        <div class="card">
+            <h3 id="p2-title">Berlin Relocation Support</h3>
+            <p id="p2-text">Expert assistance in finding housing, contract management, and administrative setup in the German capital.</p>
+        </div>
+    </div>
+    <div class="partner-box">
+        <h2 id="p3-title">Become an Alpha Partner</h2>
+        <p id="p3-text">Join our elite network of agencies and service providers. Integrate your expertise into our global infrastructure.</p>
+        <a href="https://wa.me/SEUTELEFONE" class="cta-alt" id="p3-cta">INQUIRE ABOUT PARTNERSHIP</a>
     </div>
 </section>
 
 <footer>
-    &copy; 2026 Alpha Logic Infra. Professional Support for Global Passengers.
+    <div class="trust-badges">
+        <span>EU 261/2004 COMPLIANT</span> | <span>UK261 CERTIFIED</span> | <span>US DOT 14 CFR 260</span>
+    </div>
+    <p id="footer-text">&copy; 2026 Alpha Logic Infra. Transparency is our legacy. Security is our priority.</p>
 </footer>
 
 <script>
     const translations = {
         en: {
-            heroTitle: "Delayed Flight? Get Your €600 Compensation.",
-            heroSub: "Professional Legal-Ready Kits based on 2026 Aviation Laws.",
-            cta: "CLAIM YOUR RIGHTS NOW",
-            info: "Legal Authority & 2026 Regulations",
-            law1T: "The 'Air Chaos' Update (Jan 2026)",
-            law1P: "As of January 21, 2026, the General Court's ruling strictly limits airlines from using 'traffic management' as a generic excuse.",
-            law2T: "US DOT Cash Refund Mandate",
-            law2P: "Under 14 CFR Part 260, airlines are now legally required to provide automatic cash refunds for significant delays."
+            hTitle: "Statutory Aviation Claims — 2026 Legal Standard",
+            hSub: "Global infrastructure for flight disruption recovery. Backed by proprietary data auditing and international aviation experts.",
+            hCta: "ACCESS TRANSPARENCY GUIDE 2026",
+            s1Title: "Our Technology & Methodology",
+            m1Title: "Advanced Data Auditing",
+            m1Text: "Our proprietary engine cross-references real-time flight data with current jurisprudence to isolate operational failures.",
+            m2Title: "Specialized Technical Team",
+            m2Text: "Every claim is validated by experts in international aviation law, ensuring legal authority.",
+            m3Title: "Legal-Ready Infrastructure",
+            m3Text: "We build the entire evidentiary chain required to force immediate settlements.",
+            s2Title: "Strategic Partnerships & Relocation",
+            pText: "The Alpha Logic network extends beyond claims. We provide a full ecosystem for expats in Europe.",
+            p1Title: "Certified Translations",
+            p1PText: "Access our partner network of sworn translators for official legal proceedings.",
+            p2Title: "Berlin Relocation Support",
+            p2PText: "Expert assistance in housing and administrative setup in the German capital.",
+            p3Title: "Become an Alpha Partner",
+            p3Text: "Join our elite network of agencies. Integrate your expertise into our global infrastructure.",
+            p3Cta: "INQUIRE ABOUT PARTNERSHIP"
         },
         pt: {
-            heroTitle: "Voo Atrasado? Receba sua Indenização de €600.",
-            heroSub: "Kits Jurídicos Profissionais baseados nas Leis Aéreas de 2026.",
-            cta: "REIVINDIQUE SEUS DIREITOS AGORA",
-            info: "Autoridade Jurídica e Normas de 2026",
-            law1T: "Atualização 'Caos Aéreo' (Jan 2026)",
-            law1P: "Desde 21 de janeiro de 2026, a decisão do Tribunal Geral limita rigorosamente as companhias de usar 'gestão de tráfego' como desculpa genérica.",
-            law2T: "Mandato de Reembolso em Dinheiro (EUA)",
-            law2P: "Sob a norma 14 CFR Part 260, as aéreas são obrigadas a fornecer reembolsos automáticos em dinheiro para atrasos significativos."
+            hTitle: "Reclamações Aeronáuticas Estatutárias — Padrão 2026",
+            hSub: "Infraestrutura global para recuperação de disrupções de voo. Apoiada por auditoria de dados proprietária e especialistas internacionais.",
+            hCta: "ACESSAR GUIA DE TRANSPARÊNCIA 2026",
+            s1Title: "Nossa Tecnologia e Metodologia",
+            m1Title: "Auditoria de Dados Avançada",
+            m1Text: "Nosso motor proprietário cruza dados de voo em tempo real com a jurisprudência atual para isolar falhas operacionais.",
+            m2Title: "Equipe Técnica Especializada",
+            m2Text: "Cada reclamação é validada por especialistas em direito aeronáutico internacional, garantindo autoridade jurídica.",
+            m3Title: "Infraestrutura Legal-Ready",
+            m3Text: "Construímos toda a cadeia probatória necessária para forçar liquidações imediatas das companhias aéreas.",
+            s2Title: "Parcerias Estratégicas e Relocação",
+            pText: "A rede Alpha Logic vai além das reclamações. Oferecemos um ecossistema completo para expatriados na Europa.",
+            p1Title: "Traduções Juramentadas",
+            p1PText: "Aceda à nossa rede de tradutores juramentados para documentação oficial e processos legais.",
+            p2Title: "Suporte de Relocação em Berlim",
+            p2PText: "Assistência especializada na busca de habitação e configuração administrativa na capital alemã.",
+            p3Title: "Torne-se um Parceiro Alpha",
+            p3Text: "Junte-se à nossa rede de elite de agências e prestadores de serviços. Integre sua expertise na nossa infraestrutura.",
+            p3Cta: "QUERO SER UM PARCEIRO"
         },
         de: {
-            heroTitle: "Flugverspätung? Erhalten Sie 600 € Entschädigung.",
-            heroSub: "Professionelle Kits basierend auf den Luftfahrtgesetzen von 2026.",
-            cta: "JETZT RECHTE EINFORDERN",
-            info: "Rechtliche Autorität & Vorschriften 2026",
-            law1T: "Update 'Luftchaos' (Jan 2026)",
-            law1P: "Seit dem 21. Januar 2026 schränkt das Urteil des Gerichts die Fluggesellschaften strikt ein, 'Verkehrsmanagement' als allgemeine Ausrede zu nutzen.",
-            law2T: "US DOT Bargeld-Rückerstattung",
-            law2P: "Nach 14 CFR Part 260 sind Fluggesellschaften nun gesetzlich verpflichtet, bei erheblichen Verspätungen automatische Rückerstattungen zu leisten."
+            hTitle: "Gesetzliche Luftfahrtansprüche — Rechtsstandard 2026",
+            hSub: "Globale Infrastruktur zur Wiederherstellung von Flugstörungen. Unterstützt durch eigene Datenauditierung und Experten.",
+            hCta: "TRANSPARENZ-LEITFADEN 2026 ABRUFEN",
+            s1Title: "Unsere Technologie & Methodik",
+            m1Title: "Fortschrittliche Datenauditierung",
+            m1Text: "Unsere proprietäre Engine gleicht Flugdaten in Echtzeit mit der aktuellen Rechtsprechung ab.",
+            m2Title: "Spezialisiertes Technisches Team",
+            m2Text: "Jeder Anspruch wird von Experten für internationales Luftrecht validiert.",
+            m3Title: "Legal-Ready Infrastruktur",
+            m3Text: "Wir bauen die gesamte Beweiskette auf, die für sofortige Vergleiche erforderlich ist.",
+            s2Title: "Strategische Partnerschaften & Relocation",
+            pText: "Das Alpha Logic Netzwerk geht über Ansprüche hinaus. Wir bieten ein Ökosystem für Expats in Europa.",
+            p1Title: "Beglaubigte Übersetzungen",
+            p1PText: "Nutzen Sie unser Netzwerk von beeidigten Übersetzern für offizielle Dokumente.",
+            p2Title: "Relocation-Support Berlin",
+            p2PText: "Expertenhilfe bei der Wohnungssuche und administrativen Einrichtung in Berlin.",
+            p3Title: "Alpha-Partner Werden",
+            p3Text: "Werden Sie Teil unseres Netzwerks von Agenturen und Dienstleistern.",
+            p3Cta: "PARTNERSCHAFT ANFRAGEN"
         }
     };
 
     function changeLang(lang) {
-        document.getElementById('hero-title').innerText = translations[lang].heroTitle;
-        document.getElementById('hero-sub').innerText = translations[lang].heroSub;
-        document.getElementById('cta-text').innerText = translations[lang].cta;
-        document.getElementById('info-title').innerText = translations[lang].info;
-        document.getElementById('law1-title').innerText = translations[lang].law1T;
-        document.getElementById('law1-text').innerText = translations[lang].law1P;
-        document.getElementById('law2-title').innerText = translations[lang].law2T;
-        document.getElementById('law2-text').innerText = translations[lang].law2P;
+        const t = translations[lang];
+        document.getElementById('h-title').innerText = t.hTitle;
+        document.getElementById('h-sub').innerText = t.hSub;
+        document.getElementById('h-cta').innerText = t.hCta;
+        document.getElementById('s1-title').innerText = t.s1Title;
+        document.getElementById('m1-title').innerText = t.m1Title;
+        document.getElementById('m1-text').innerText = t.m1Text;
+        document.getElementById('m2-title').innerText = t.m2Title;
+        document.getElementById('m2-text').innerText = t.m2Text;
+        document.getElementById('m3-title').innerText = t.m3Title;
+        document.getElementById('m3-text').innerText = t.m3Text;
+        document.getElementById('s2-title').innerText = t.s2Title;
+        document.getElementById('p-text').innerText = t.pText;
+        document.getElementById('p1-title').innerText = t.p1Title;
+        document.getElementById('p2-title').innerText = t.p2Title;
+        document.getElementById('p3-title').innerText = t.p3Title;
+        document.getElementById('p3-text').innerText = t.p3Text;
+        document.getElementById('p3-cta').innerText = t.p3Cta;
     }
 </script>
 
