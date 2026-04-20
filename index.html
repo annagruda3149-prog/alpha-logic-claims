@@ -1,159 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Logic Infra | Global Passenger Rights</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root { --gold: #C6A667; --dark: #0D0D0D; --light: #FFFFFF; --gray: #1a1a1a; }
-        html { scroll-behavior: smooth; }
-        body { background-color: var(--dark); color: var(--light); font-family: 'Montserrat', sans-serif; margin: 0; line-height: 1.6; }
-        header { padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--gold); position: sticky; top: 0; background: var(--dark); z-index: 1000; }
-        .logo { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 22px; text-transform: uppercase; letter-spacing: 2px; }
-        .lang-btn { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 5px 12px; cursor: pointer; border-radius: 2px; font-size: 12px; margin-left: 5px; }
-        
-        .hero { text-align: center; padding: 120px 20px; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?auto=format&fit=crop&w=1350&q=80'); background-size: cover; border-bottom: 1px solid var(--gold); }
-        h1 { font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 10px; color: var(--gold); }
-        .hero p { font-size: 18px; font-weight: 300; max-width: 800px; margin: 0 auto 30px; }
-        .cta-main { background: var(--gold); color: var(--dark); padding: 18px 45px; font-weight: 700; text-decoration: none; border-radius: 2px; transition: 0.4s; display: inline-block; cursor: pointer; border: none; font-size: 16px; }
-
-        .section { padding: 80px 50px; max-width: 1100px; margin: auto; }
-        h2 { font-family: 'Playfair Display', serif; font-size: 32px; border-bottom: 2px solid var(--gold); display: inline-block; margin-bottom: 40px; }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: var(--gray); padding: 30px; border: 1px solid #333; border-radius: 4px; }
-        .card h3 { color: var(--gold); margin-top: 0; }
-
-        .partner-box { background: var(--gold); color: var(--dark); padding: 40px; text-align: center; margin-top: 40px; }
-        .cta-alt { border: 2px solid var(--dark); color: var(--dark); padding: 12px 30px; text-decoration: none; font-weight: 700; margin-top: 20px; display: inline-block; }
-
-        footer { text-align: center; padding: 60px; background: #050505; border-top: 1px solid #222; font-size: 13px; }
-        .legal-notice { margin-top: 20px; color: #666; font-size: 11px; }
-    </style>
-</head>
-<body>
+<style>
+    .logo-container {
+        display: flex;
+        align-items: center;
+        border: 2px solid var(--gold);
+        padding: 5px 15px;
+    }
+    .logo-text {
+        font-family: 'Playfair Display', serif;
+        color: var(--gold);
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+    .brand-sub {
+        font-size: 10px;
+        color: var(--light);
+        display: block;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+</style>
 
 <header>
-    <div class="logo">Alpha Logic Infra</div>
+    <div class="logo-container">
+        <div>
+            <span class="logo-text">Alpha Logic</span>
+            <span class="brand-sub">INFRASTRUCTURE GROUP</span>
+        </div>
+    </div>
     <div>
         <button class="lang-btn" onclick="changeLang('en')">EN</button>
         <button class="lang-btn" onclick="changeLang('pt')">PT</button>
-        <button class="lang-btn" onclick="changeLang('de')">DE</button>
     </div>
 </header>
-
-<section class="hero">
-    <h1 id="h-title">Aviation Claims — 2026 Legal Standard</h1>
-    <p id="h-sub">High-end infrastructure for flight disruption recovery. Backed by proprietary data auditing and international experts.</p>
-    <a href="#methodology" class="cta-main" id="h-cta">ACCESS TRANSPARENCY PROTOCOL</a>
-</section>
-
-<section class="section" id="methodology">
-    <h2 id="s1-title">Technology & Methodology</h2>
-    <div class="grid">
-        <div class="card">
-            <h3 id="m1-title">Advanced Data Auditing</h3>
-            <p id="m1-text">Our engine cross-references real-time flight data with 2026 jurisprudence to isolate operational failures from extraordinary circumstances.</p>
-        </div>
-        <div class="card">
-            <h3 id="m2-title">Technical Validation</h3>
-            <p id="m2-text">Claims are analyzed by our specialized technical team, ensuring that demands are legally unassailable and ready for enforcement.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section" style="background: #111;">
-    <h2 id="s2-title">Expansion & Partnerships</h2>
-    <p id="p-text">The Alpha Logic network is currently expanding its ecosystem of verified services across Europe.</p>
-    <div class="grid">
-        <div class="card">
-            <h3 id="p1-title">Upcoming: Sworn Translations</h3>
-            <p id="p1-text">We are formalizing a network of certified translators in Berlin and London for official legal proceedings.</p>
-        </div>
-        <div class="card">
-            <h3 id="p2-title">Upcoming: Relocation Support</h3>
-            <p id="p2-text">Future specialized assistance for administrative setup and housing in major European capitals.</p>
-        </div>
-    </div>
-    <div class="partner-box">
-        <h2 id="p3-title">Partner with Alpha Logic</h2>
-        <p id="p3-text">Are you a service provider? Inquire about joining our elite infrastructure via our professional audit channel.</p>
-        <a href="mailto:audit@alphalogicinfra.com" class="cta-alt" id="p3-cta">CONTACT PARTNERSHIP DEPT</a>
-    </div>
-</section>
-
-<footer>
-    <p id="footer-text">&copy; 2026 Alpha Logic Infra. Transparency is our legacy. Security is our priority.</p>
-    <div class="legal-notice">
-        Sources: Regulation (EC) 261/2004 | US DOT 14 CFR 260 | Montreal Convention 2025
-    </div>
-</footer>
-
-<script>
-    const translations = {
-        en: {
-            hTitle: "Aviation Claims — 2026 Legal Standard",
-            hSub: "High-end infrastructure for flight disruption recovery. Backed by proprietary data auditing and international experts.",
-            hCta: "ACCESS TRANSPARENCY PROTOCOL",
-            s1Title: "Technology & Methodology",
-            m1Title: "Advanced Data Auditing",
-            m1Text: "Our engine cross-references real-time flight data with 2026 jurisprudence to isolate operational failures.",
-            m2Title: "Technical Validation",
-            m2Text: "Claims are analyzed by our specialized technical team, ensuring that demands are legally unassailable.",
-            s2Title: "Expansion & Partnerships",
-            pText: "The Alpha Logic network is currently expanding its ecosystem of verified services across Europe.",
-            p1Title: "Upcoming: Sworn Translations",
-            p1Text: "We are formalizing a network of certified translators in Berlin and London for official proceedings.",
-            p2Title: "Upcoming: Relocation Support",
-            p2Text: "Future specialized assistance for administrative setup and housing in major European capitals.",
-            p3Title: "Partner with Alpha Logic",
-            p3Text: "Are you a service provider? Inquire about joining our elite infrastructure via our professional audit channel.",
-            p3Cta: "CONTACT PARTNERSHIP DEPT"
-        },
-        pt: {
-            hTitle: "Reclamações Aeronáuticas — Padrão 2026",
-            hSub: "Infraestrutura de elite para recuperação de voos. Apoiada por auditoria de dados e especialistas internacionais.",
-            hCta: "ACESSAR PROTOCOLO DE TRANSPARÊNCIA",
-            s1Title: "Tecnologia e Metodologia",
-            m1Title: "Auditoria de Dados Avançada",
-            m1Text: "Nosso motor cruza dados de voo em tempo real com a jurisprudência de 2026 para isolar falhas operacionais.",
-            m2Title: "Validação Técnica",
-            m2Text: "As reclamações são analisadas por nossa equipe técnica especializada, garantindo que as demandas sejam incontestáveis.",
-            s2Title: "Expansão e Parcerias",
-            pText: "A rede Alpha Logic está em fase de expansão de seu ecossistema de serviços verificados na Europa.",
-            p1Title: "Em Breve: Traduções Juramentadas",
-            p1Text: "Estamos formalizando uma rede de tradutores certificados em Berlim e Londres para processos oficiais.",
-            p2Title: "Em Breve: Suporte de Relocação",
-            p2Text: "Futura assistência especializada para configuração administrativa e habitação em capitais europeias.",
-            p3Title: "Seja um Parceiro Alpha Logic",
-            p3Text: "Você é um prestador de serviços? Entre em contato sobre nossa infraestrutura através do nosso canal de auditoria.",
-            p3Cta: "CONTATO DE PARCERIAS"
-        }
-    };
-
-    function changeLang(lang) {
-        const t = translations[lang];
-        if(!t) return;
-        document.getElementById('h-title').innerText = t.hTitle;
-        document.getElementById('h-sub').innerText = t.hSub;
-        document.getElementById('h-cta').innerText = t.hCta;
-        document.getElementById('s1-title').innerText = t.s1Title;
-        document.getElementById('m1-title').innerText = t.m1Title;
-        document.getElementById('m1-text').innerText = t.m1Text;
-        document.getElementById('m2-title').innerText = t.m2Title;
-        document.getElementById('m2-text').innerText = t.m2Text;
-        document.getElementById('s2-title').innerText = t.s2Title;
-        document.getElementById('p-text').innerText = t.pText;
-        document.getElementById('p1-title').innerText = t.p1Title;
-        document.getElementById('p1-text').innerText = t.p1Text;
-        document.getElementById('p2-title').innerText = t.p2Title;
-        document.getElementById('p2-text').innerText = t.p2Text;
-        document.getElementById('p3-title').innerText = t.p3Title;
-        document.getElementById('p3-text').innerText = t.p3Text;
-        document.getElementById('p3-cta').innerText = t.p3Cta;
-    }
-</script>
-
-</body>
-</html>
